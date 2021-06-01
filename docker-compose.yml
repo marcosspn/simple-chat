@@ -1,0 +1,15 @@
+version: "3"
+services:
+    chat:
+        image: "marcos/chat"
+        ports:
+            - "3000:3000"
+        network_mode: host
+    redis-stream:
+        image: "marcos/redis-stream"
+        network_mode: host
+    redis:
+        image: "redislabs/rejson"
+        ports:
+            - "6379:6379"
+        network_mode: host
